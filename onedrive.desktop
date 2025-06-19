@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=OneDrive
+Exec=rclone --vfs-cache-mode writes mount "OneDrive":  /home/thomas/OneDrive
+Terminal=false
+Type=Application

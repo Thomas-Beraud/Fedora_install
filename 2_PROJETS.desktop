@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=2_PROJETS
+Exec=rclone --vfs-cache-mode writes mount "2_PROJETS":  /home/thomas/2_PROJETS
+Terminal=false
+Type=Application
