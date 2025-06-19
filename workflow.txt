@@ -34,8 +34,9 @@ y
 # Repeter pour chaque disque a distance
 # In the hidden folder .config/autostart/ add application shortcut onedrive.desktop
 cd ~
-mkdir OneDrive
-Exec = rclone --vfs-cache-mode writes mount OneDrive: /home/thomas/OneDrive/ --config /home/thomas/.config/rclone/rclone.conf 
+mkdir 1_EQUIPE 2_PROJETS OneDrive .config/autostart
+mv /Downloads/onedrive.desktop .config/autostart/
+# Exec = rclone --vfs-cache-mode writes mount OneDrive: /home/thomas/OneDrive/ --config /home/thomas/.config/rclone/rclone.conf 
 
 sudo dnf install keepassxc
 
