@@ -1,3 +1,7 @@
+echo "Installing Rclone to access OneDrive and GoogleDrive"
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
+rclone config
+
 echo "Create Remote Drive AutoStart"
 cd ~
 mkdir 1_EQUIPE 2_PROJETS OneDrive .config/autostart
