@@ -19,7 +19,7 @@ else echo "export CWPROOT=$HOME/SeisUnix" >> $HOME/.bashrc
      echo "export PATH=$PATH:$HOME/SeisUnix/bin" >> $HOME/.bashrc
 fi
 
-sudo dnf -y install libXmu-devel mesa-libGL-devel mesa-libGLU-devel mesa-libGLw-devel freeglut-devel libXt-devel libXrender-devel libXrandr-devel libXi-devel libXinerama-devel libX11-devel libtirpc libtirpc-devel libXt-devel
+sudo dnf -y install make gcc libXmu-devel mesa-libGL-devel mesa-libGLU-devel mesa-libGLw-devel freeglut-devel libXt-devel libXrender-devel libXrandr-devel libXi-devel libXinerama-devel libX11-devel libtirpc libtirpc-devel libXt-devel
 
 tar -xvzf $HOME/Downloads/cwp_su_all_44R28.tgz --directory=$HOME/Downloads
 
