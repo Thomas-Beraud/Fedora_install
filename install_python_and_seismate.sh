@@ -10,7 +10,7 @@ python3.11 -m venv .seismate
 source .seismate/bin/activate
 pip install -r ~/requirements.txt
 
-export PYTHONPATH="${PYTHONPATH}:/home/thomas/Documents/GitHub/seismate"
-export PYTHONPATH="${PYTHONPATH}:/home/thomas/Documents/GitHub/traitement-sismique"
+export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/GitHub/seismate"
+export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/GitHub/traitement-sismique"
 
 echo "Finished!!, type in terminal: source ~/.bashrc"
