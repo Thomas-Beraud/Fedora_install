@@ -1,4 +1,5 @@
 sudo dnf install python3-spyder
+sudo dnf install keepassxc # Can be removed by user
 
 # Create seismate env
 sudo dnf install python3.11
