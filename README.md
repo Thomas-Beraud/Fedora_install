@@ -10,7 +10,7 @@ Manual command to mount remote disk named OneDrive in the /home/thomas/OneDrive 
 ```console
 rclone --vfs-cache-mode writes mount OneDrive: /home/thomas/OneDrive/ --config /home/thomas/.config/rclone/rclone.conf 
 ```
-
+git  
 ## VsCode Extensions (User preference)
 Better Comments, Python, Rainbow csv, jupyter
 
