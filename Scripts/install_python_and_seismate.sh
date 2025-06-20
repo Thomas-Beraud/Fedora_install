@@ -8,7 +8,7 @@ mkdir venv
 cd venv
 python3.11 -m venv .seismate
 source .seismate/bin/activate
-pip install -r ~/requirements.txt
+pip install -r ~/Downloads/Fedora_install/Scripts/requirements.txt
 
 export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/GitHub/seismate"
 export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/GitHub/traitement-sismique"
