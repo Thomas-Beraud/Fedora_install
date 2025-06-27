@@ -26,7 +26,7 @@ rclone --vfs-cache-mode writes mount OneDrive: /home/thomas/OneDrive/ --config /
 ## VsCode Extensions (User preference)
 Better Comments, Python, Rainbow csv, jupyter
 
-## :warning: Add github path in .bashrc
+## :warning: Add github path in .bashrc for VsCodium
 Run command in terminal : 
 ```console
 source ~/.bashrc
