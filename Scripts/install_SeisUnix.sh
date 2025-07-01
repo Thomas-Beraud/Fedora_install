@@ -24,7 +24,7 @@ sudo dnf -y install make gcc libXmu-devel mesa-libGL-devel mesa-libGLU-devel mes
 tar -xvzf $HOME/Downloads/cwp_su_all_44R28.tgz --directory=$HOME/Downloads
 
 mv $HOME/Downloads/src/ $HOME/SeisUnix
-cp $HOME/Downloads/Fedora_install/Scripts/Makefile.config $HOME/SeisUnix/src/
+cp $HOME/Downloads/Fedora_install-main/Scripts/Makefile.config $HOME/SeisUnix/src/
 
 echo "Compilation..."
 cd $CWPROOT/src && make install
