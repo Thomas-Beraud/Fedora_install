@@ -20,7 +20,7 @@ In rclone 38 for OneDrive or 22 for GoogleDrive, and then select shared disk and
 
 Manual command to mount remote disk named OneDrive in the /home/thomas/OneDrive folder :
 ```console
-rclone --vfs-cache-mode writes mount OneDrive: /home/thomas/OneDrive/ --config /home/thomas/.config/rclone/rclone.conf 
+rclone --vfs-cache-mode writes mount OneDrive /home/thomas/OneDrive/ --config /home/thomas/.config/rclone/rclone.conf 
 ```
 
 ## VsCode Extensions (User preference)
