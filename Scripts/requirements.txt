@@ -25,3 +25,5 @@ evodcinv
 stochopy
 disba
 qtapputils
+pyproj
+rasterio
