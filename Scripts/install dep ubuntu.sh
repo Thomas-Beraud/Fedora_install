@@ -35,7 +35,7 @@ sudo apt update && sudo apt install codium
 
 # Installation python pour Seismate / Geostack
 sudo apt update
-sudo apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev curl libbz2-dev
+sudo apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev curl libbz2-dev libncursesw5-dev  libsqlite3-dev tk-dev  libc6-dev 
 
 # Download the source code for the desired Python version
 curl -O https://www.python.org/ftp/python/3.11.9/Python-3.11.9.tgz
@@ -46,25 +46,13 @@ cd Python-3.11.9
 ./configure --enable-optimizations
 make -j $(nproc)
 sudo make altinstall
-
-
-sudo apt upgrade
-sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
-wget https://www.python.org/ftp/python/3.11.9/Python-3.11.9.tgz
-tar -xvf Python-3.11.9.tgz
-cd Python-3.11.9
-./configure --enable-optimizations
-nproc
-make -j 4 
-make altinstall
 cd ..
-sudo rm -r Python3.11.9
-rm Python3.11.9.tgz
+sudo rm Python3.11.9.tgz
 
 cd Documents/
 mkdir venv
 cd venv
-python -m venv --without-pip .seismate
+python -m venv .seismate
 source .seismate/bin/activate
 pip install -r ~/Downloads/requirements.txt
 
