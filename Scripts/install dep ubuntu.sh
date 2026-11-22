@@ -32,6 +32,8 @@ echo -e 'Types: deb\nURIs: https://download.vscodium.com/debs\nSuites: vscodium\
 | sudo tee /etc/apt/sources.list.d/vscodium.sources
 sudo apt update && sudo apt install codium
 
+wget
+ -qO- https://astral.sh/uv/install.sh | sh
 curl -LsSf https://astral.sh | sh
 uv python install 3.11.9
 
