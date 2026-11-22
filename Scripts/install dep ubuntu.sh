@@ -34,17 +34,13 @@ sudo apt update && sudo apt install codium
 
 
 # Installation python pour Seismate / Geostack
-sudo add-apt-repository -y ppa:deadsnakes/ppa
-sudo sed -i 's/lunar/resolute/g' /etc/apt/sources.list.d/deadsnakes-ubuntu-ppa-lunar.list
-sudo apt update
-
 sudo apt update
 sudo apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev curl libbz2-dev
 
 # Download the source code for the desired Python version
-curl -O https://www.python.org/ftp/python/3.11.4/Python-3.11.4.tgz
-tar -xf Python-3.11.4.tgz
-cd Python-3.11.4
+curl -O https://www.python.org/ftp/python/3.11.9/Python-3.11.9.tgz
+tar -xf Python-3.11.9.tgz
+cd Python-3.11.9
 
 # Configure and install
 ./configure --enable-optimizations
