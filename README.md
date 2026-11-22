@@ -1,4 +1,4 @@
-# Fedora for Geostack with SeisUnix <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Fedora_logo.svg" width="35">
+# Fedora with SeisUnix <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Fedora_logo.svg" width="35">
 Script and files to install a clean Fedora for work and compile SeisUnix from the work of https://github.com/JohnWStockwellJr.
 
 Modified from https://github.com/PAULGOYES/install_seismicUnix
