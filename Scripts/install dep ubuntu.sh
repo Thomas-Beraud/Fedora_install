@@ -32,10 +32,12 @@ echo -e 'Types: deb\nURIs: https://download.vscodium.com/debs\nSuites: vscodium\
 | sudo tee /etc/apt/sources.list.d/vscodium.sources
 sudo apt update && sudo apt install codium
 
+curl -LsSf https://astral.sh | sh
+uv python install 3.11.9
 
 # Installation python pour Seismate / Geostack
 sudo apt update
-sudo apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev curl libbz2-dev libncursesw5-dev  libsqlite3-dev tk-dev  libc6-dev 
+sudo apt install -y build-essential zlib1g-dev libncurses-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev curl libbz2-dev libsqlite3-dev tk-dev libc6-dev 
 
 # Download the source code for the desired Python version
 curl -O https://www.python.org/ftp/python/3.11.9/Python-3.11.9.tgz
@@ -47,12 +49,13 @@ cd Python-3.11.9
 make -j $(nproc)
 sudo make altinstall
 cd ..
-sudo rm Python3.11.9.tgz
+sudo rm Python-3.11.9.tgz
+sudo rm -rf Python-3.11.9
 
 cd Documents/
 mkdir venv
 cd venv
-python -m venv .seismate
+python3.11 -m venv .seismate
 source .seismate/bin/activate
 pip install -r ~/Downloads/requirements.txt
 
