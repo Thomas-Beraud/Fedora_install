@@ -38,20 +38,19 @@ uv python install 3.11.9
 cd Documents/
 mkdir venv
 cd venv
-uv venv --python 3.11 --seed .seismate
+uv venv --python 3.11 /home/thomas/Documents/venv/.seismate
 source .seismate/bin/activate
-pip install -r ~/requirements.txt
+uv pip install -r ~/requirements.txt
 
 export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/GitHub/seismate"
 export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/GitHub/traitement-sismique"
 
-echo "Installing Rclone to access OneDrive and GoogleDrive"
 sudo -v ; curl https://rclone.org/install.sh | sudo bash
 rclone config
 
 echo "Create Remote Drive AutoStart"
 cd ~
 mkdir 1_EQUIPE 2_PROJETS OneDrive .config/autostart
-cp ~/Fedora_install/Scripts/onedrive.desktop .config/autostart/
-cp ~/Fedora_install/Scripts/1_EQUIPE.desktop .config/autostart/
-cp ~/Fedora_install/Scripts/2_PROJETS.desktop .config/autostart/
+cp ~/onedrive.desktop .config/autostart/
+cp ~/1_EQUIPE.desktop .config/autostart/
+cp ~/2_PROJETS.desktop .config/autostart/
