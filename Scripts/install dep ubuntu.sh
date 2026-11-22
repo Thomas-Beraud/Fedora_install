@@ -8,29 +8,34 @@ wget https://github.com/Thomas-Beraud/Fedora_install/blob/main/Scripts/requireme
 # Install needed packages
 sudo apt update
 sudo apt upgrade
-
-# Installation Spyder
+sudo apt install inkscape
+sudo apt install keepassxc
 sudo apt install python3-spyder
 
 # Installation de Github Desktop
-wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
-    | gpg --dearmor \
-    | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
-wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
-sudo apt update && sudo apt install github-desktop
+curl -fsSL https://mirror.mwt.me/shiftkey-desktop/gpgkey | sudo gpg --dearmor --yes -o /usr/share/keyrings/mwt-desktop.gpg
+printf '%s\n' \
+'Types: deb' \
+'URIs: https://mirror.mwt.me/shiftkey-desktop/deb/' \
+'Suites: any' \
+'Components: main' \
+'Architectures: amd64' \
+'Signed-By: /usr/share/keyrings/mwt-desktop.gpg' \
+| sudo tee /etc/apt/sources.list.d/mwt-desktop.sources > /dev/null
+sudo apt update
+apt-cache policy github-desktop
+sudo apt install github-desktop -y
+
 
 # Installation VsCode
 echo -e 'Types: deb\nURIs: https://download.vscodium.com/debs\nSuites: vscodium\nComponents: main\nArchitectures: amd64 arm64\nSigned-by: /usr/share/keyrings/vscodium-archive-keyring.gpg' \
 | sudo tee /etc/apt/sources.list.d/vscodium.sources
 sudo apt update && sudo apt install codium
 
-# Installation gestionnaire mot de passe
-sudo apt install keepassxc
 
 # Installation python pour Seismate / Geostack
-apt upgrade
-apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
+sudo apt upgrade
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
 wget https://www.python.org/ftp/python/3.11.9/Python-3.11.9.tgz
 tar -xvf Python-3.11.9.tgz
 cd Python-3.11.9
