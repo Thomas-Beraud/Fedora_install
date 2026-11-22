@@ -26,7 +26,6 @@ sudo apt update
 apt-cache policy github-desktop
 sudo apt install github-desktop -y
 
-
 # Installation VsCode
 echo -e 'Types: deb\nURIs: https://download.vscodium.com/debs\nSuites: vscodium\nComponents: main\nArchitectures: amd64 arm64\nSigned-by: /usr/share/keyrings/vscodium-archive-keyring.gpg' \
 | sudo tee /etc/apt/sources.list.d/vscodium.sources
@@ -45,12 +44,12 @@ uv pip install -r ~/requirements.txt
 export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/GitHub/seismate"
 export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/GitHub/traitement-sismique"
 
-sudo -v ; curl https://rclone.org/install.sh | sudo bash
-rclone config
-
 echo "Create Remote Drive AutoStart"
 cd ~
 mkdir 1_EQUIPE 2_PROJETS OneDrive .config/autostart
 cp ~/onedrive.desktop .config/autostart/
 cp ~/1_EQUIPE.desktop .config/autostart/
 cp ~/2_PROJETS.desktop .config/autostart/
+
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
+rclone config
