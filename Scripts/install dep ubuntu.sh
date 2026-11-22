@@ -1,6 +1,5 @@
 
 # Donwload requirements
-echo "Donwload needed script and files"
 wget https://github.com/Thomas-Beraud/Fedora_install/blob/main/Scripts/1_EQUIPE.desktop
 wget https://github.com/Thomas-Beraud/Fedora_install/blob/main/Scripts/2_PROJETS.desktop
 wget https://github.com/Thomas-Beraud/Fedora_install/blob/main/Scripts/onedrive.desktop
@@ -8,10 +7,7 @@ wget https://github.com/Thomas-Beraud/Fedora_install/blob/main/Scripts/requireme
 
 # Install needed packages
 sudo apt update
-sudo apt install alacritty
-sudo apt install firefox
-sudo apt install vlc
-sudo apt install libreoffice
+sudo apt upgrade
 
 # Installation Spyder
 sudo apt install python3-spyder
@@ -22,8 +18,9 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-package
 sudo apt update && sudo apt install github-desktop
 
 # Installation VsCode
-snap install codium --classic
-
+echo -e 'Types: deb\nURIs: https://download.vscodium.com/debs\nSuites: vscodium\nComponents: main\nArchitectures: amd64 arm64\nSigned-by: /usr/share/keyrings/vscodium-archive-keyring.gpg' \
+| sudo tee /etc/apt/sources.list.d/vscodium.sources
+sudo apt update && sudo apt install codium
 
 # Installation gestionnaire mot de passe
 sudo apt install keepassxc
